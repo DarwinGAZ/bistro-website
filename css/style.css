@@ -10,6 +10,7 @@
 :root {
     --color-red: #ad343e;
     --color-gray: #474747;
+    --color-white: #f9f9f7;
 }
 
 .container {
@@ -232,13 +233,21 @@ header .nb-button {
 .info-services--div {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    gap: 10px;
+}
+
+.services .container {
+    display: grid;
 }
 
 .services .container h1 {
     font-size: 3rem;
     width: 600px;
     padding: 40px 0px 40px 0px;
+}
+
+.info-services img {
+    width: 250px;
 }
 
 .info-services h2 {
@@ -248,4 +257,106 @@ header .nb-button {
 .info-services p {
     width: 300px;
     padding-top: 14px;
+}
+
+/* FASTEST */
+
+.delivery {
+    margin: 40px 0;
+    padding: 40px 0;
+    background-color: #f9f9f7;
+}
+
+.delivery .container {
+    display: flex;
+    align-items: center;
+}
+
+.delivery-img--div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.delivery-img--div img:first-child {
+    grid-row: span 2;
+    width: 400px;
+}
+
+.delivery-topics {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 50px;
+    gap: 15px;
+}
+
+.delivery-topics div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.delivery-text {
+    padding-left: 70px;
+}
+
+.delivery-text h1 {
+    font-size: 3.8em;
+    width: 600px;
+    padding-bottom: 10px;
+}
+
+.delivery-text p {
+    width: 450px;
+}
+
+/* CUSTOMERS */
+
+.customers .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.customers-title {
+    text-align: center;
+    font-size: 2.5em;
+    padding: 50px;
+}
+
+.customer-article {
+    background-color: var(--color-white);
+    border-radius: 10px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.customer-article h2 {
+    color: var(--color-red);
+    padding: 30px;
+}
+
+.customer-article p {
+    width: 400px;
+    padding: 0px 30px 30px;
+}
+
+.customer-article hr {
+    color: rgba(0, 0, 0, 0.104);
+}
+
+.info-customer {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.info-customer img {
+    padding-right: 20px;
+}
+
+.info-customer span {
+    font-weight: bold;
 }
