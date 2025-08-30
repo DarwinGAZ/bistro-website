@@ -317,7 +317,8 @@ header .nb-button {
 .customers .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 30px;
+    padding-bottom: 10vh;
 }
 
 .customers-title {
@@ -344,7 +345,10 @@ header .nb-button {
 }
 
 .customer-article hr {
-    color: rgba(0, 0, 0, 0.104);
+    border: none;
+    height: 1px;
+    margin: 20px;
+    background-color: #00000013;
 }
 
 .info-customer {
@@ -359,4 +363,68 @@ header .nb-button {
 
 .info-customer span {
     font-weight: bold;
+}
+
+/* BLOG */
+
+.blog {
+    background-color: var(--color-white);
+}
+
+.blog-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 0;
+}
+
+.blog-title h1 {
+    font-size: 3rem;
+}
+
+.blog-title a {
+    padding: 20px 30px;
+    position: relative;
+    left: 100px;
+    background-color: var(--color-red);
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+.article-blog--div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.article-blog--div .main {
+    grid-row: span 2;
+}
+
+.article-blog--div .main p {
+    padding-bottom: 120px;
+}
+
+.info-blog--article {
+    padding: 0px 20px 20px 20px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: white;
+}
+
+.info-blog--article h6 {
+    padding: 20px 0;
+    font-weight: normal;
+    color: var(--color-gray);
+}
+
+.info-blog--article h2 {
+    padding-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.info-blog--article p {
+    color: var(--color-gray);
+    padding-bottom: 30px;
 }
