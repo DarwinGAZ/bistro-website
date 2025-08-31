@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
 * {
     padding: 0;
     margin: 0;
@@ -7,10 +9,18 @@
     font-family: "Rubik";
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 :root {
     --color-red: #ad343e;
     --color-gray: #474747;
+    --color-grayl: #8d8e87;
     --color-white: #f9f9f7;
+    --color-black: #2b2e25;
+    --font-play: "Playfair Display";
 }
 
 .container {
@@ -18,6 +28,12 @@
     max-width: 1200px;
     margin: auto;
     padding: 0 20px;
+}
+
+.title-text {
+    font-family: var(--font-play);
+    color: #2a2d24;
+    font-weight: 500;
 }
 
 .top-site {
@@ -44,6 +60,13 @@ header .container {
 .title-header {
     display: flex;
     align-items: center;
+    font-family: "Playfair Display";
+}
+
+.title-header h1 {
+    font-family: "Playfair Display";
+    color: var(--color-gray);
+    font-style: italic;
 }
 
 .menu a {
@@ -65,6 +88,7 @@ header .nb-button {
     background: none;
     cursor: pointer;
     font-size: 1em;
+    font-weight: 500;
 }
 
 /* HERO SECTION */
@@ -88,10 +112,16 @@ header .nb-button {
 .hero-text h1 {
     font-size: 5em;
     width: 500px;
+    font-family: var(--font-play);
+    color: #2c2f23;
+    font-weight: normal;
 }
 
 .hero-text p {
-    width: 300px;
+    width: 500px;
+    padding-top: 15px;
+    color: var(--color-gray);
+    font-size: 1.1rem;
 }
 
 .hero-buttons {
@@ -104,7 +134,8 @@ header .nb-button {
     margin: 10px;
     padding: 20px 30px;
     font-size: 18px;
-    border-radius: 20px;
+    border-radius: 40px;
+    cursor: pointer;
 }
 
 #hero-button1 {
@@ -133,6 +164,9 @@ header .nb-button {
     text-align: center;
     padding-top: 40px;
     padding-bottom: 40px;
+    font-family: var(--font-play);
+    color: #2b2e25;
+    font-weight: 500;
     font-size: 3em;
 }
 
@@ -211,13 +245,22 @@ header .nb-button {
 .family-text h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
+    font-family: var(--font-play);
+    color: #2a2d24;
+    font-weight: 500;
+    font-weight: bold;
 }
 
 .family-text h4 {
     padding: 20px 0;
+    font-weight: normal;
 }
 
-.nb-button {
+.family-text p {
+    color: var(--color-gray);
+}
+
+family .nb-button {
     display: inline-block;
     margin-top: 30px;
     padding: 20px 25px;
@@ -226,6 +269,7 @@ header .nb-button {
     text-decoration: none;
     color: #000;
     font-weight: bold;
+    font-weight: 500;
 }
 
 /* SERVICES */
@@ -244,6 +288,9 @@ header .nb-button {
     font-size: 3rem;
     width: 600px;
     padding: 40px 0px 40px 0px;
+    font-family: var(--font-play);
+    color: #2a2d24;
+    font-weight: 500;
 }
 
 .info-services img {
@@ -327,6 +374,12 @@ header .nb-button {
     padding: 50px;
 }
 
+.customers-title h1 {
+    font-family: var(--font-play);
+    color: #2a2d24;
+    font-weight: 500;
+}
+
 .customer-article {
     background-color: var(--color-white);
     border-radius: 10px;
@@ -379,13 +432,17 @@ header .nb-button {
 }
 
 .blog-title h1 {
+    font-family: var(--font-play);
+    color: #2a2d24;
+    font-weight: 500;
+}
+
+.blog-title h1 {
     font-size: 3rem;
 }
 
 .blog-title a {
     padding: 20px 30px;
-    position: relative;
-    left: 100px;
     background-color: var(--color-red);
     border-radius: 30px;
     text-decoration: none;
@@ -396,6 +453,7 @@ header .nb-button {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    justify-content: center;
 }
 
 .article-blog--div .main {
@@ -427,4 +485,99 @@ header .nb-button {
 .info-blog--article p {
     color: var(--color-gray);
     padding-bottom: 30px;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--color-gray);
+    color: white;
+}
+
+footer .container {
+    display: flex;
+    padding: 50px;
+}
+
+.footer-info div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer-info h1 {
+    font-family: var(--font-play);
+    color: white;
+    font-weight: 500;
+    padding-left: 15px;
+}
+
+footer p {
+    padding-top: 20px;
+    width: 280px;
+    color: var(--color-grayl);
+}
+
+.footer-social {
+    display: flex;
+    padding-top: 30px;
+    gap: 10px;
+}
+
+footer .footer-pages {
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+    gap: 20px;
+}
+
+.footer-pages a:first-child {
+    padding-top: 35px;
+}
+
+.footer-pages a {
+    text-decoration: none;
+    color: var(--color-grayl);
+    transition: all 0.3s ease;
+}
+
+.footer-pages a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+footer .footer-utility {
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+    gap: 20px;
+}
+
+.footer-utility a {
+    text-decoration: none;
+    color: var(--color-grayl);
+    transition: all 0.3s ease;
+}
+
+.footer-utility a:first-child {
+    padding-top: 35px;
+}
+
+.footer-utility a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.footer-follow-img {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 40px;
+    gap: 20px;
+}
+
+.final-section {
+    background-color: var(--color-gray);
+    color: var(--color-grayl);
+    text-align: center;
+    padding: 50px;
 }
