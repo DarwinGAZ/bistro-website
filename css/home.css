@@ -352,8 +352,11 @@ header .nb-button {
 
 .delivery-text h1 {
     font-size: 3.8em;
-    width: 600px;
+    width: 500px;
     padding-bottom: 10px;
+    font-family: var(--font-play);
+    font-weight: 500;
+    color: var(--color-black);
 }
 
 .delivery-text p {
