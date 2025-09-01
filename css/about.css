@@ -151,3 +151,17 @@ header .nb-button {
 .family-text p {
     color: var(--color-gray);
 }
+
+/* VIDEO */
+
+.video #background {
+    display: block;
+}
+
+.video #play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+}
