@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/menu.css" />
+        <link rel="stylesheet" href="css/book.css" />
         <title>Document</title>
     </head>
     <body>
@@ -51,138 +51,84 @@
             </div>
         </header>
 
-        <main class="menu-foods">
-            <div class="container">
-                <h1>Our Menu</h1>
+        <section class="book">
+            <div class="book-title">
+                <h1>Book A Table</h1>
                 <p>
                     We consider all the drivers of change gives you the
                     components you need to change to create a truly happens.
                 </p>
-
-                <div class="menu-btn--div">
-                    <button class="menu-btn active">All</button>
-                    <button class="menu-btn">Breakfast</button>
-                    <button class="menu-btn">Main Dishes</button>
-                    <button class="menu-btn">Drinks</button>
-                    <button class="menu-btn">Desserts</button>
-                </div>
-
-                <div class="article-menu--div">
-                    <article class="article-menu">
-                        <img src="assets/images/fried-eggs.png" alt="" />
-
-                        <span>$ 9.99</span>
-
-                        <h1>Fried Eggs</h1>
-                        <p>
-                            Made with eggs, lettuce, salt, oil, and other
-                            ingredients.
-                        </p>
-                    </article>
-
-                    <article class="article-menu">
-                        <img src="assets/images/pizzas.png" alt="" />
-
-                        <span>$ 15.99</span>
-
-                        <h1>Hawaiian Pizza</h1>
-                        <p>
-                            Made with eggs, lettuce, salt, oil, and other
-                            ingredients.
-                        </p>
-                    </article>
-
-                    <article class="article-menu">
-                        <img src="assets/images/vine.png" alt="" />
-
-                        <span>$ 7.25</span>
-
-                        <h1>Martinez Cocktail</h1>
-                        <p>
-                            Made with eggs, lettuce, salt, oil, and other
-                            ingredients.
-                        </p>
-                    </article>
-
-                    <article class="article-menu">
-                        <img src="assets/images/pie.png" alt="" />
-
-                        <span>$ 20.99</span>
-
-                        <h1>Butterscotch Cake</h1>
-                        <p>
-                            Made with eggs, lettuce, salt, oil, and other
-                            ingredients.
-                        </p>
-                    </article>
-
-                    <article class="article-menu">
-                        <img src="assets/images/soda.png" alt="" />
-
-                        <span>$ 5.89</span>
-
-                        <h1>Mint Lemonade</h1>
-                        <p>
-                            Made with eggs, lettuce, salt, oil, and other
-                            ingredients.
-                        </p>
-                    </article>
-
-                    <article class="article-menu">
-                        <img src="assets/images/gelato.png" alt="" />
-
-                        <span>$ $ 18.05</span>
-
-                        <h1>Chocolate Icecream</h1>
-                        <p>
-                            Made with eggs, lettuce, salt, oil, and other
-                            ingredients.
-                        </p>
-                    </article>
-
-                    <article class="article-menu">
-                        <img src="assets/images/burguer.png" alt="" />
-
-                        <span>$ 12.55</span>
-
-                        <h1>Cheese Burger</h1>
-                        <p>
-                            Made with eggs, lettuce, salt, oil, and other
-                            ingredients.
-                        </p>
-                    </article>
-
-                    <article class="article-menu">
-                        <img src="assets/images/pancakes.png" alt="" />
-
-                        <span>$ 12.99</span>
-
-                        <h1>Classic Waffles</h1>
-                        <p>
-                            Made with eggs, lettuce, salt, oil, and other
-                            ingredients.
-                        </p>
-                    </article>
-                </div>
             </div>
-        </main>
 
-        <section class="apps">
             <div class="container">
-                <div>
-                    <h1>You can order through apps</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit
-                        enim bibendum sed et aliquet aliquet risus tempor
-                        semper.
-                    </p>
-                </div>
+                <div class="book-input--div">
+                    <!-- Date -->
+                    <div class="label-input--div">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" />
+                    </div>
 
-                <div>
-                    <img src="assets/images/logos.png" alt="" />
+                    <!-- Time -->
+                    <div class="label-input--div">
+                        <label for="time">Time</label>
+                            <select name="time" id="time">
+                                <option value="18:30">6:30 PM</option>
+                                <option value="19:00">7:00 PM</option>
+                                <option value="19:30">7:30 PM</option>
+                                <option value="20:00">8:00 PM</option>
+                                <option value="20:30">8:30 PM</option>
+                                <option value="21:00">9:00 PM</option>
+                                <option value="21:00">9:30 PM</option>
+                            </select>
+                        </option>
+                    </div>
+
+                    <!-- Name -->
+                    <div class="label-input--div">
+                        <label for="name">Your Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter Your Name"
+                        />
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="label-input--div">
+                        <label for="phone">Phone</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="x-xxx-xxxxxxxx"
+                        />
+                    </div>
+
+                    <!-- People -->
+                    <div class="label-input--div">
+                        <label for="people">Number of People</label>
+                        <select id="people" name="people">
+                            <option>1 Person</option>
+                            <option>2 Persons</option>
+                            <option>3 Persons</option>
+                            <option>4 Persons</option>
+                            <option>5 Persons</option>
+                            <option>6 Persons</option>
+                            <option>7 Persons</option>
+                            <option>8 Persons</option>
+                            <option>9 Persons</option>
+                            <option>10 Persons</option>
+                        </select>
+                    </div>
+
+                    <button>Book A Table</button>
                 </div>
             </div>
         </section>
+        <div>
+            <img src="assets/images/maps.png" alt="" id="img-maps" />
+        </div>
 
         <footer>
             <div class="container">

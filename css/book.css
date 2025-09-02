@@ -95,95 +95,92 @@ header .nb-button {
     font-weight: 500;
 }
 
-/* MENU */
+/* BOOK */
 
-.menu-foods {
-    padding: 40px;
+.book {
+    background-color: var(--color-white);
 }
 
-.menu-foods h1 {
-    font-size: 4.5rem;
+.book-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.book-title h1 {
+    padding-top: 50px;
+    padding-bottom: 10px;
     text-align: center;
+    font-size: 4.5rem;
     font-family: var(--font-play);
+    font-weight: 500;
+    color: var(--color-black);
 }
 
-.menu-foods p {
+.book-title p {
+    width: 500px;
     text-align: center;
     color: var(--color-gray);
-    padding-bottom: 50px;
 }
 
-.menu-btn--div {
-    display: flex;
+.book-input--div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
-    gap: 25px;
-}
-
-.menu-btn--div .menu-btn {
-    padding: 10px;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    padding: 50px;
+    margin-top: 50px;
     border-radius: 20px;
-    width: 100px;
-    border: 1px solid rgba(0, 0, 0, 0.392);
-    background: none;
-    text-wrap: nowrap;
-    margin-bottom: 60px;
+    box-shadow: 1px 1px 5px 1px black;
+    position: relative;
+    z-index: 1000;
+    margin-bottom: 20px;
 }
 
-.menu-btn.active {
+.book-input--div input,
+button,
+select {
+    padding: 20px;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.089);
+}
+
+.book-input--div button {
     background-color: var(--color-red);
     color: white;
 }
 
-.article-menu--div {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
-    gap: 20px;
+.book-input--div button {
+    grid-column: span 2;
 }
 
-.article-menu {
+.label-input--div {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    border: 1px solid rgba(0, 0, 0, 0.234);
-    border-radius: 30px;
 }
 
-.article-menu span {
-    color: var(--color-red);
-    padding-top: 20px;
-    font-size: 1.9rem;
+.label-input--div:has(#time) {
+    grid-column: span 1;
 }
 
-.article-menu h1 {
-    font-size: 1.5rem;
-    padding-bottom: 10px;
-    font-family: "rubik";
-    font-weight: 500;
+.label-input--div:has(select) {
+    grid-column: span 2;
 }
 
-/* APPS */
-
-.apps {
-    background-color: var(--color-white);
+.label-input--div label {
+    margin-bottom: 10px;
 }
 
-.apps .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.apps .container h1 {
-    font-size: 3rem;
-    font-family: var(--font-play);
-    width: 400px;
-    padding-bottom: 30px;
-}
-
-.apps .container p {
-    color: var(--color-gray);
-    width: 300px;
+#img-maps {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    margin-top: -15%;
 }
 
 /* FOOTER */
@@ -191,6 +188,8 @@ header .nb-button {
 footer {
     background-color: var(--color-gray);
     color: white;
+    margin-top: 15%;
+    padding-top: 100px;
 }
 
 footer .container {
