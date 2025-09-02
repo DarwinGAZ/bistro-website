@@ -80,6 +80,8 @@ header .nb-button {
     padding: 10px 15px;
     border-radius: 20px;
     border: 1px solid;
+    text-decoration: none;
+    color: black;
     background: none;
     cursor: pointer;
     font-size: 1em;

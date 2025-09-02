@@ -23,10 +23,6 @@ body {
     --font-play: "Playfair Display";
 }
 
-button {
-    cursor: pointer;
-}
-
 .container {
     width: 100%;
     max-width: 1200px;
@@ -97,95 +93,57 @@ header .nb-button {
     font-weight: 500;
 }
 
-/* MENU */
+/* BLOG */
 
-.menu-foods {
-    padding: 40px;
-}
-
-.menu-foods h1 {
-    font-size: 4.5rem;
-    text-align: center;
-    font-family: var(--font-play);
-}
-
-.menu-foods p {
-    text-align: center;
-    color: var(--color-gray);
-    padding-bottom: 50px;
-}
-
-.menu-btn--div {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-}
-
-.menu-btn--div .menu-btn {
-    padding: 10px;
-    border-radius: 20px;
-    width: 100px;
-    border: 1px solid rgba(0, 0, 0, 0.392);
-    background: none;
-    text-wrap: nowrap;
-    margin-bottom: 60px;
-}
-
-.menu-btn.active {
-    background-color: var(--color-red);
-    color: white;
-}
-
-.article-menu--div {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
-    gap: 20px;
-}
-
-.article-menu {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    border: 1px solid rgba(0, 0, 0, 0.234);
-    border-radius: 30px;
-}
-
-.article-menu span {
-    color: var(--color-red);
-    padding-top: 20px;
-    font-size: 1.9rem;
-}
-
-.article-menu h1 {
-    font-size: 1.5rem;
-    padding-bottom: 10px;
-    font-family: "rubik";
-    font-weight: 500;
-}
-
-/* APPS */
-
-.apps {
+.blog {
+    padding: 50px;
     background-color: var(--color-white);
 }
 
-.apps .container {
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+}
+
+.blog-text {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.apps .container h1 {
-    font-size: 3rem;
+.blog-text h1 {
+    font-size: 3.8rem;
+    text-align: center;
     font-family: var(--font-play);
-    width: 400px;
-    padding-bottom: 30px;
 }
 
-.apps .container p {
+.blog-text p {
+    text-align: center;
+    width: 450px;
     color: var(--color-gray);
-    width: 300px;
+}
+
+.blog-article {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.article-text {
+    padding: 30px;
+}
+
+.article-text p {
+    color: var(--color-gray);
+}
+
+.article-text h3 {
+    padding-top: 10px;
 }
 
 /* FOOTER */
