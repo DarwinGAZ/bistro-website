@@ -75,6 +75,14 @@ header .container {
     padding: 0px 20px;
 }
 
+.menu .nb-button {
+    display: none;
+}
+
+.hamburguer-div {
+    display: none;
+}
+
 .menu a.active {
     background-color: rgba(128, 128, 128, 0.378);
     border-radius: 20px;
@@ -113,7 +121,8 @@ header .nb-button {
 
 .hero-text h1 {
     font-size: 5em;
-    width: 500px;
+    max-width: 500px;
+    width: 100%;
     font-family: var(--font-play);
     color: #2c2f23;
     font-weight: normal;
@@ -586,4 +595,61 @@ footer .footer-utility {
     color: var(--color-grayl);
     text-align: center;
     padding: 50px;
+}
+
+@media (max-width: 850px) {
+    .top-site {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .title-header {
+        font-size: 0.7rem;
+    }
+
+    .hamburguer-div {
+        display: block;
+    }
+
+    header .container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    header .container .nb-button {
+        display: none;
+    }
+
+    .hero-section h1 {
+        width: 90%;
+    }
+
+    .hero-section p {
+        width: 95%;
+        color: black;
+    }
+
+    .hero-section button {
+        text-wrap: nowrap;
+    }
+
+    .browse-menu--section .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    header .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .browse-menu--section .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
