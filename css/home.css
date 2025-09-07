@@ -120,7 +120,7 @@ header .nb-button {
 }
 
 .hero-text h1 {
-    font-size: 5em;
+    font-size: clamp(3.5rem, 10vw, 5rem);
     max-width: 500px;
     width: 100%;
     font-family: var(--font-play);
@@ -717,6 +717,10 @@ footer .footer-utility {
     .info-blog--article h2 {
         font-size: 1.1rem;
     }
+
+    .footer-follow {
+        display: none;
+    }
 }
 
 @media (max-width: 500px) {
@@ -737,6 +741,10 @@ footer .footer-utility {
     .family .image-wrapper img {
         max-width: 350px;
         padding: 0;
+    }
+
+    .family .visit-us {
+        display: none;
     }
 
     .services .container h1 {
@@ -779,6 +787,8 @@ footer .footer-utility {
         display: flex;
         flex-direction: column;
         text-align: center;
+        justify-content: center;
+        align-items: center;
     }
 
     .blog-title h1 {
@@ -809,7 +819,7 @@ footer .footer-utility {
     footer .container {
         display: flex;
         flex-direction: column;
-        gap: 40px; /* espaço entre blocos */
+        gap: 40px;
         padding: 30px 20px;
     }
 
@@ -842,8 +852,7 @@ footer .footer-utility {
         text-align: center;
     }
 
-    .footer-follow-img {
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
+    .footer-follow {
+        display: none;
     }
 }

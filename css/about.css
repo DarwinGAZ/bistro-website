@@ -58,6 +58,14 @@ header .container {
     font-family: "Playfair Display";
 }
 
+.menu .nb-button {
+    display: none;
+}
+
+.hamburguer-div {
+    display: none;
+}
+
 .title-header h1 {
     font-family: "Playfair Display";
     color: var(--color-gray);
@@ -410,4 +418,35 @@ footer .footer-utility {
     color: var(--color-grayl);
     text-align: center;
     padding: 50px;
+}
+
+@media (max-width: 850px) {
+    .top-site {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .title-header {
+        font-size: 0.7rem;
+    }
+
+    .hamburguer-div {
+        display: block;
+    }
+
+    .hamburguer-div span {
+        font-weight: bold;
+    }
+
+    header .container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    header .container .nb-button {
+        display: none;
+    }
 }
