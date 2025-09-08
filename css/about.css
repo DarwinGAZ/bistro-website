@@ -449,4 +449,94 @@ footer .footer-utility {
     header .container .nb-button {
         display: none;
     }
+
+    .family .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .video .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .customers .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-follow {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .right-side img {
+        display: none;
+    }
+
+    .video .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .video-article p {
+        max-width: 200px;
+    }
+
+    .visit-us {
+        display: none;
+    }
+
+    .image-wrapper img {
+        max-width: 420px;
+    }
+
+    .video #play,
+    .video h1 {
+        display: none;
+    }
+
+    footer .container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 30px 20px;
+    }
+
+    .footer-info {
+        text-align: center;
+    }
+
+    .footer-info div {
+        justify-content: center;
+    }
+
+    .footer-info p {
+        margin: auto;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-pages,
+    .footer-utility,
+    .footer-follow {
+        text-align: center;
+    }
+
+    .footer-pages a,
+    .footer-utility a {
+        padding: 0;
+        text-align: center;
+    }
+
+    .footer-follow {
+        display: none;
+    }
 }
