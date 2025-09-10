@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/contact.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <%- include("../partials/header.ejs") %>
+
+        <section class="contact">
+            <div class="contact-title">
+                <h1>Contact Us</h1>
+                <p>
+                    We consider all the drivers of change gives you the
+                    components you need to change to create a truly happens.
+                </p>
+            </div>
+
+            <div class="container">
+                <div class="contact-input--div">
+                    <div class="label-input--div">
+                        <label for="name">Name</label>
+                        <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="Enter your Name"
+                        />
+                    </div>
+
+                    <div class="label-input--div">
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Enter email address"
+                        />
+                    </div>
+
+                    <div class="label-input--div">
+                        <label for="subject">Subject</label>
+                        <input
+                            type="text"
+                            name="subject"
+                            id="subject"
+                            placeholder="Write a subject"
+                        />
+                    </div>
+
+                    <div class="label-input--div">
+                        <label for="message">Message</label>
+                        <textarea
+                            name="message"
+                            id="message"
+                            placeholder="Write your message"
+                        ></textarea>
+                    </div>
+
+                    <button class="contact-btn">Send</button>
+                </div>
+
+                <div class="contact-info">
+                    <div>
+                        <h3>Call Us:</h3>
+                        <h2 id="number">+1-234-567-8900</h2>
+                    </div>
+
+                    <div>
+                        <h3>Hours:</h3>
+                        <h2>
+                            Mon-Fri: 11am - 8pm Sat, <br />
+                            Sun: 9am - 10pm
+                        </h2>
+                    </div>
+
+                    <div>
+                        <h3>Our Location:</h3>
+                        <h2>
+                            123 Bridge Street Nowhere Land, LA 12345 United
+                            States
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <%- include("../partials/footer.ejs") %>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>

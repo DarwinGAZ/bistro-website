@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/menu.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <%- include("../partials/header.ejs") %>
+
+        <main class="menu-foods">
+            <div class="container">
+                <h1>Our Menu</h1>
+                <p>
+                    We consider all the drivers of change gives you the
+                    components you need to change to create a truly happens.
+                </p>
+
+                <div class="menu-btn--div">
+                    <a
+                        href="/menu"
+                        class="menu-btn <%= selectedCategory === 'all' ? 'active' : '' %>"
+                        >All</a
+                    >
+                    <a
+                        href="/menu?category=breakfast"
+                        class="menu-btn <%= selectedCategory === 'breakfast' ? 'active' : '' %>"
+                        >Breakfast</a
+                    >
+                    <a
+                        href="/menu?category=mainDishes"
+                        class="menu-btn <%= selectedCategory === 'mainDishes' ? 'active' : '' %>"
+                        >Main Dishes</a
+                    >
+                    <a
+                        href="/menu?category=drinks"
+                        class="menu-btn <%= selectedCategory === 'drinks' ? 'active' : '' %>"
+                        >Drinks</a
+                    >
+                    <a
+                        href="/menu?category=desserts"
+                        class="menu-btn <%= selectedCategory === 'desserts' ? 'active' : '' %>"
+                        >Desserts</a
+                    >
+                </div>
+
+                <div class="article-menu--div">
+                    <% items.forEach(item => { %>
+                    <article class="article-menu">
+                        <img src="<%= item.image %>" alt="<%= item.name %>" />
+                        <span>$ <%= item.price.toFixed(2) %></span>
+                        <h1><%= item.name %></h1>
+                        <p><%= item.description %></p>
+                    </article>
+                    <% }) %>
+                </div>
+            </div>
+        </main>
+
+        <section class="apps">
+            <div class="container">
+                <div class="apps-text">
+                    <h1>You can order through apps</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipiscing elit
+                        enim bibendum sed et aliquet aliquet risus tempor
+                        semper.
+                    </p>
+                </div>
+
+                <div>
+                    <img src="assets/images/logos.png" alt="" />
+                </div>
+            </div>
+        </section>
+
+        <%- include("../partials/footer.ejs") %>
+
+        <section class="final-section">Developer By DarwinGAZ.</section>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>

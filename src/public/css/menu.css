@@ -148,11 +148,14 @@ header .nb-button {
 .menu-btn--div .menu-btn {
     padding: 10px;
     border-radius: 20px;
-    width: 100px;
+    width: 120px;
     border: 1px solid rgba(0, 0, 0, 0.392);
     background: none;
     text-wrap: nowrap;
     margin-bottom: 60px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
 }
 
 .menu-btn.active {

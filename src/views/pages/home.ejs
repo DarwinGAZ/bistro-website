@@ -4,55 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.typekit.net/hpf6nta.css">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="/css/home.css">
     <title>Bistro</title>
 </head>
 <body>
 
-    <section class="top-site">
-        <div class="container">
-            <div class="info-top">
-                <img src="/assets/images/icons/phone.png" alt=""> <span>(414)857 - 0107</span>
-                <img src="/assets/images/icons/email.png" alt="">     <span>yummy@bistrobliss</span>
-            </div>
-            <div class="social-top">
-                <a href=""><img src="assets/images/icons/twitter.png" alt=""></a>
-                <a href=""><img src="assets/images/icons/facebook.png" alt=""></a>
-                <a href=""><img src="assets/images/icons/instagram.png" alt=""></a>
-                <a href=""><img src="assets/images/icons/github.png" alt=""></a>
-            </div>
-        </div>
-
-    </section>
-
-    <header>
-        <div class="container">
-            <div class="title-header">
-                <img src="assets/images/icons/japanese-food.png" alt="">
-                <h1>Bistro Bliss</h1>
-            </div>
-
-            <div class="menu">
-                <a href="home.html" class="active">Home</a>
-                <a href="about.html">About</a>
-                <a href="menu.html">Menu</a>
-                <a href="pages.html">Pages</a>
-                <a href="contact.html">Contact</a>
-                <div>
-                    <a class="nb-button" href="book.html">Book A Table</a>
-                </div>
-            </div>
-
-            <div class="hamburguer-div">
-                <span>☰</span>
-            </div>
-
-            
-                <a class="nb-button" href="book.html">Book A Table</a>
-
-        </div>
-
-    </header>
+    <%- include("../partials/header.ejs") %>
 
     <section class="hero-section">
         <div class="hero-text">
@@ -62,8 +19,8 @@
         
 
         <div class="hero-buttons">
-            <a id="hero-button1" href="book.html">Book A Table</a>
-            <a id="hero-button2" class="nb-buttonv" href="menu.html">Explore Menu</a>
+            <a id="hero-button1" href="/book">Book A Table</a>
+            <a id="hero-button2" class="nb-buttonv" href="/menu">Explore Menu</a>
         </div>
     </section>
 
@@ -79,7 +36,7 @@
                 <h3>Breakfast</h3>
                 <p>In the new era of technology we look in the future with certainty and pride for our life.</p>
 
-                <a href="menu.html">Explore Menu</a>
+                <a href="/menu">Explore Menu</a>
 
             </article>
 
@@ -90,7 +47,7 @@
                 <h3>Breakfast</h3>
                 <p>In the new era of technology we look in the future with certainty and pride for our life.</p>
 
-                <a href="menu.html">Explore Menu</a>
+                <a href="/menu">Explore Menu</a>
             
             </article>
 
@@ -101,7 +58,7 @@
                 <h3>Breakfast</h3>
                 <p>In the new era of technology we look in the future with certainty and pride for our life.</p>
 
-                <a href="menu.html">Explore Menu</a>
+                <a href="/menu">Explore Menu</a>
             
             </article>
 
@@ -112,7 +69,7 @@
                 <h3>Breakfast</h3>
                 <p>In the new era of technology we look in the future with certainty and pride for our life.</p>
 
-                <a href="menu.html">Explore Menu</a>
+                <a href="/menu">Explore Menu</a>
             
             </article>
 
@@ -137,7 +94,7 @@
       <h1>We provide healthy food for your family.</h1>
       <h4>Our story began with a vision to create a unique dining experience that merges fine dining, exceptional service, and a vibrant ambiance. Rooted in city's rich culinary culture, we aim to honor our local roots while infusing a global palate.</h4>
       <p>At place, we believe that dining is not just about food, but also about the overall experience. Our staff, renowned for their warmth and dedication, strives to make every visit an unforgettable event.</p>
-      <a href="about.html" class="nb-button">More About Us</a>
+      <a href="/about" class="nb-button">More About Us</a>
     </div>
   </div>
 </section>
@@ -279,7 +236,7 @@
         <div class="container">
             <div class="blog-title">
                <h1>Our Blog & Articles</h1>
-                <a href="pages.html">Read All Articles</a>
+                <a href="/pages">Read All Articles</a>
             </div>
 
             <div class="article-blog--div">
@@ -347,66 +304,8 @@
 
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-info">
-                <div>
-                    <img src="assets/images/icons/japanese-food-white.png" alt="">
-                    <h1>Bistro Bliss</h1>
-                    
-                </div>
-                <p>In the new era of technology we look a in the future with certainty and pride to for our company and.</p>
-                    <div class="footer-social">
-                        <a href=""><img src="assets/images/icons/twitter-r.png" alt=""></a>
-                        <a href=""><img src="assets/images/icons/facebook-r.png" alt=""></a>
-                        <a href=""><img src="assets/images/icons/instagram-r.png" alt=""></a>
-                        <a href=""><img src="assets/images/icons/github-r.png" alt=""></a>
-                    </div>
-                
-            </div>
+<%- include("../partials/footer.ejs") %>
 
-            <div class="footer-pages">
-                Pages
-
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Menu</a>
-                <a href="">Pricing</a>
-                <a href="">Blog</a>
-                <a href="">Contact</a>
-                <a href="">Delivery</a>
-            </div>
-
-            <div class="footer-utility">
-                Utility Pages
-                
-                <a href="">Start Here</a>
-                <a href="">Styleguide</a>
-                <a href="">Password Protected</a>
-                <a href="">404 Now Found</a>
-                <a href="">Licenses</a>
-                <a href="">Changelog</a>
-                <a href="">View More</a>
-            </div>
-
-            <div class="footer-follow">
-                Follow Us on instagram
-
-                <div class="footer-follow-img">
-                    <img src="assets/images/egg.png" alt="">
-                    <img src="assets/images/french-fries.png" alt="">
-                    <img src="assets/images/salad.png" alt="">
-                    <img src="assets/images/pancake.png" alt="">
-                </div>
-                
-            </div>
-        </div>
-    </footer>
-
-    <section class="final-section">
-        Developer By DarwinGAZ.
-    </section>
-
-    <script src="js/script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>
