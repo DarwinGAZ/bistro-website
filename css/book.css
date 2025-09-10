@@ -23,10 +23,6 @@ body {
     --font-play: "Playfair Display";
 }
 
-button {
-    cursor: pointer;
-}
-
 .container {
     width: 100%;
     max-width: 1200px;
@@ -41,6 +37,10 @@ button {
 }
 
 .top-site {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
     background-color: var(--color-gray);
     color: white;
 }
@@ -53,6 +53,14 @@ button {
 }
 
 /* HEADER */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 40px;
+    z-index: 1000;
+    background-color: white;
+}
 
 header .container {
     display: flex;
@@ -77,6 +85,21 @@ header .container {
     text-decoration: none;
     color: black;
     padding: 0px 20px;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: rgba(128, 128, 128, 0.378);
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+
+.menu .nb-button {
+    display: none;
+}
+
+.hamburguer-div {
+    display: none;
 }
 
 .menu a.active {
@@ -100,6 +123,7 @@ header .nb-button {
 /* BOOK */
 
 .book {
+    margin-top: 120px;
     background-color: var(--color-white);
 }
 
@@ -114,14 +138,14 @@ header .nb-button {
     padding-top: 50px;
     padding-bottom: 10px;
     text-align: center;
-    font-size: 4.5rem;
+    font-size: 4.3rem;
     font-family: var(--font-play);
     font-weight: 500;
     color: var(--color-black);
 }
 
 .book-title p {
-    width: 500px;
+    width: 90%;
     text-align: center;
     color: var(--color-gray);
 }
@@ -138,7 +162,7 @@ header .nb-button {
     border-radius: 20px;
     box-shadow: 1px 1px 5px 1px black;
     position: relative;
-    z-index: 1000;
+    z-index: 99;
     margin-bottom: 20px;
 }
 
@@ -280,4 +304,130 @@ footer .footer-utility {
     color: var(--color-grayl);
     text-align: center;
     padding: 50px;
+}
+
+@media (max-width: 850px) {
+    header {
+        top: 0;
+    }
+
+    .top-site {
+        display: none;
+    }
+
+    .menu {
+        position: fixed; /* fixa na tela */
+        top: 80px;
+        left: 0;
+        width: 100vw;
+        padding-top: 20px;
+        height: 30%;
+        display: grid;
+        place-items: center;
+        grid-auto-flow: row;
+        row-gap: 15px;
+        background-color: white;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 9999;
+    }
+
+    .menu.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu div .nb-button {
+        display: block;
+    }
+
+    .container .nb-button {
+        display: none;
+    }
+
+    .title-header {
+        font-size: 0.7rem;
+    }
+
+    .hamburguer-div {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburguer-div span {
+        font-weight: bold;
+    }
+
+    header .container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    footer {
+        margin-top: 60%;
+    }
+
+    .footer-follow {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .book-input--div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .label-input--div {
+        width: 100%;
+    }
+
+    .book-input--div button {
+        width: 100%;
+    }
+
+    footer {
+        margin-top: 100%;
+    }
+
+    footer .container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 30px 20px;
+    }
+
+    .footer-info {
+        text-align: center;
+    }
+
+    .footer-info div {
+        justify-content: center;
+    }
+
+    .footer-info p {
+        margin: auto;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-pages,
+    .footer-utility,
+    .footer-follow {
+        padding: 0;
+        text-align: center;
+    }
+
+    .footer-pages a,
+    .footer-utility a {
+        text-align: center;
+    }
+
+    .footer-follow {
+        display: none;
+    }
 }

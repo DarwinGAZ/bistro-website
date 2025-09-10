@@ -9,6 +9,11 @@
     font-family: "Rubik";
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 :root {
     --color-red: #ad343e;
     --color-gray: #474747;
@@ -32,6 +37,10 @@
 }
 
 .top-site {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
     background-color: var(--color-gray);
     color: white;
 }
@@ -44,6 +53,14 @@
 }
 
 /* HEADER */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 40px;
+    z-index: 1000;
+    background-color: white;
+}
 
 header .container {
     display: flex;
@@ -58,14 +75,6 @@ header .container {
     font-family: "Playfair Display";
 }
 
-.menu .nb-button {
-    display: none;
-}
-
-.hamburguer-div {
-    display: none;
-}
-
 .title-header h1 {
     font-family: "Playfair Display";
     color: var(--color-gray);
@@ -76,6 +85,21 @@ header .container {
     text-decoration: none;
     color: black;
     padding: 0px 20px;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: rgba(128, 128, 128, 0.378);
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+
+.menu .nb-button {
+    display: none;
+}
+
+.hamburguer-div {
+    display: none;
 }
 
 .menu a.active {
@@ -99,6 +123,7 @@ header .nb-button {
 /* FAMILY */
 
 .family {
+    margin-top: 120px;
     background-color: #f9f9f7;
     padding: 60px 0;
 }
@@ -276,8 +301,8 @@ header .nb-button {
 
 .customers-title {
     text-align: center;
-    font-size: 2.5em;
-    padding: 50px;
+    font-size: 2.3em;
+    padding: 50px 0;
 }
 
 .customers-title h1 {
@@ -421,11 +446,42 @@ footer .footer-utility {
 }
 
 @media (max-width: 850px) {
+    header {
+        top: 0;
+    }
+
     .top-site {
         display: none;
     }
 
     .menu {
+        position: fixed; /* fixa na tela */
+        top: 80px;
+        left: 0;
+        width: 100vw;
+        padding-top: 20px;
+        height: 30%;
+        display: grid;
+        place-items: center;
+        grid-auto-flow: row;
+        row-gap: 15px;
+        background-color: white;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 9999;
+    }
+
+    .menu.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu div .nb-button {
+        display: block;
+    }
+
+    .container .nb-button {
         display: none;
     }
 
@@ -435,6 +491,7 @@ footer .footer-utility {
 
     .hamburguer-div {
         display: block;
+        cursor: pointer;
     }
 
     .hamburguer-div span {
@@ -444,10 +501,6 @@ footer .footer-utility {
     header .container {
         display: flex;
         justify-content: space-around;
-    }
-
-    header .container .nb-button {
-        display: none;
     }
 
     .family .container {
