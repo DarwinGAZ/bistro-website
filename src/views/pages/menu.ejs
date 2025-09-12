@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <%- include("../partials/head.ejs") %>
         <link rel="stylesheet" href="css/menu.css" />
-        <title>Document</title>
     </head>
+
     <body>
         <%- include("../partials/header.ejs") %>
 
@@ -51,7 +50,9 @@
                         <img src="<%= item.image %>" alt="<%= item.name %>" />
                         <span>$ <%= item.price.toFixed(2) %></span>
                         <h1><%= item.name %></h1>
+
                         <p><%= item.description %></p>
+                        <a>Add to cart</a>
                     </article>
                     <% }) %>
                 </div>
