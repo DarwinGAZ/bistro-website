@@ -48,11 +48,13 @@
                     <% items.forEach(item => { %>
                     <article class="article-menu">
                         <img src="<%= item.image %>" alt="<%= item.name %>" />
-                        <span>$ <%= item.price.toFixed(2) %></span>
-                        <h1><%= item.name %></h1>
+                        <span class="price"
+                            >$ <%= item.price.toFixed(2) %></span
+                        >
+                        <h1 class="product-name"><%= item.name %></h1>
 
                         <p><%= item.description %></p>
-                        <a>Add to cart</a>
+                        <a class="add-to-cart">Add to cart</a>
                     </article>
                     <% }) %>
                 </div>
@@ -79,6 +81,17 @@
         <%- include("../partials/footer.ejs") %>
 
         <section class="final-section">Developer By DarwinGAZ.</section>
+
+        <div id="cart-modal" class="cart-modal" style="display: none">
+            <div class="cart-modal-content">
+                <h2>Produto adicionado ao carrinho!</h2>
+                <h1>🎉</h1>
+                <div class="cart-modal-actions">
+                    <button id="continue-btn">Continuar Comprando</button>
+                    <a id="go-cart-btn" href="/cart">Ir para o Carrinho</a>
+                </div>
+            </div>
+        </div>
 
         <script src="js/script.js"></script>
     </body>

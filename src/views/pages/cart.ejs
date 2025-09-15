@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <%- include("../partials/head.ejs") %>
+        <link rel="stylesheet" href="css/cart.css" />
+    </head>
+    <body>
+        <%- include("../partials/header.ejs") %>
+        <section class="cart-header">
+            <h1>Seu Carrinho</h1>
+        </section>
+
+        <main class="cart-page">
+            <div id="cart-items"></div>
+
+            <div class="cart-summary">
+                <div class="summary-line">
+                    <span>Subtotal</span>
+                    <span id="subtotal">$ 0.00</span>
+                </div>
+                <div class="summary-line">
+                    <span>Taxa de entrega</span>
+                    <span id="delivery">$ 10.00</span>
+                </div>
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span id="total">$ 0.00</span>
+                </div>
+                <button class="checkout-btn">Finalizar Pedido</button>
+            </div>
+        </main>
+
+        <%- include("../partials/footer.ejs") %>
+        <script src="/js/script.js"></script>
+    </body>
+</html>

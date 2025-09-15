@@ -85,7 +85,7 @@ header .container {
 
 .cart {
     text-decoration: none;
-    color: black;
+    color: var(--color-red);
 }
 
 .menu a {
@@ -125,4 +125,78 @@ header .nb-button {
     cursor: pointer;
     font-size: 1em;
     font-weight: 500;
+}
+
+.cart-div {
+    display: flex;
+}
+
+@media (max-width: 850px) {
+    header {
+        top: 0;
+    }
+
+    .top-site {
+        display: none;
+    }
+
+    .menu {
+        position: fixed; /* fixa na tela */
+        top: 80px;
+        left: 0;
+        width: 100vw;
+        padding-top: 20px;
+        height: 40%;
+        display: grid;
+        place-items: center;
+        grid-auto-flow: row;
+        row-gap: 15px;
+        background-color: white;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 9999;
+    }
+
+    .menu.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu div .nb-button {
+        display: block;
+    }
+
+    .container .nb-button {
+        display: none;
+    }
+
+    .title-header {
+        font-size: 0.7rem;
+    }
+
+    .hamburguer-div {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburguer-div span {
+        font-weight: bold;
+    }
+
+    header .container {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 500px) {
+    header .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .cart {
+        border-right: 15px solid transparent;
+    }
 }

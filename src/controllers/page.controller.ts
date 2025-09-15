@@ -1,8 +1,5 @@
 import { RequestHandler } from "express";
-import {
-    createManyMenuItensService,
-    getMenuItemsService,
-} from "../services/menu";
+import { getMenuItemsService } from "../services/menu";
 
 export const homePage: RequestHandler = (req, res) => {
     res.render("../views/pages/home.ejs", {
@@ -46,8 +43,8 @@ export const bookPage: RequestHandler = (req, res) => {
     });
 };
 
-export const createManyMenuItens: RequestHandler = async (req, res) => {
-    const itens = await createManyMenuItensService();
-
-    return itens;
+export const cartPage: RequestHandler = (req, res) => {
+    res.render("../views/pages/cart.ejs", {
+        currentPage: "",
+    });
 };
