@@ -1,5 +1,6 @@
 import { RequestHandler } from "express";
 import { getMenuItemsService } from "../services/menu";
+import { getManyBlogItems } from "./blog.controller";
 
 export const homePage: RequestHandler = (req, res) => {
     res.render("../views/pages/home.ejs", {
@@ -22,12 +23,16 @@ export const menuPage: RequestHandler = async (req, res) => {
         currentPage: "menu",
         items,
         selectedCategory: category || "all",
+        publishableKey: process.env.STRIPE_PUBLIC_KEY,
     });
 };
 
-export const pagesPage: RequestHandler = (req, res) => {
+export const pagesPage: RequestHandler = async (req, res) => {
+    const items = await getManyBlogItems();
+
     res.render("../views/pages/pages.ejs", {
         currentPage: "pages",
+        items,
     });
 };
 
@@ -45,6 +50,30 @@ export const bookPage: RequestHandler = (req, res) => {
 
 export const cartPage: RequestHandler = (req, res) => {
     res.render("../views/pages/cart.ejs", {
+        currentPage: "",
+    });
+};
+
+export const contactOKPage: RequestHandler = (req, res) => {
+    res.render("../views/pages/contactOK.ejs", {
+        currentPage: "",
+    });
+};
+
+export const paymentOkPage: RequestHandler = (req, res) => {
+    res.render("../views/pages/payment-ok.ejs", {
+        currentPage: "",
+    });
+};
+
+export const paymentErrorPage: RequestHandler = (req, res) => {
+    res.render("../views/pages/payment-error.ejs", {
+        currentPage: "",
+    });
+};
+
+export const paymentPendingPage: RequestHandler = (req, res) => {
+    res.render("../views/pages/payment-pending.ejs", {
         currentPage: "",
     });
 };

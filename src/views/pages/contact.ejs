@@ -17,14 +17,15 @@
             </div>
 
             <div class="container">
-                <div class="contact-input--div">
+                <form action="/sendContact" method="post">
+                    <div class="contact-input--div">
                     <div class="label-input--div">
                         <label for="name">Name</label>
                         <input
                             type="text"
                             name="name"
                             id="name"
-                            placeholder="Enter your Name"
+                            placeholder="Enter your Name" required min="2"
                         />
                     </div>
 
@@ -34,7 +35,7 @@
                             type="email"
                             name="email"
                             id="email"
-                            placeholder="Enter email address"
+                            placeholder="Enter email address" required
                         />
                     </div>
 
@@ -44,7 +45,7 @@
                             type="text"
                             name="subject"
                             id="subject"
-                            placeholder="Write a subject"
+                            placeholder="Write a subject" required max="60"
                         />
                     </div>
 
@@ -53,9 +54,11 @@
                         <textarea
                             name="message"
                             id="message"
-                            placeholder="Write your message"
+                            placeholder="Write your message" required 
                         ></textarea>
                     </div>
+                </form>
+                
 
                     <button class="contact-btn">Send</button>
                 </div>

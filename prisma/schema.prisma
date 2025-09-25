@@ -28,3 +28,10 @@ model MenuItem {
   image String
   category Category 
 }
+
+model PagesItem {
+  id Int @id @default(autoincrement())
+  title String
+  data String
+  image String
+}

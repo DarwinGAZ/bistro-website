@@ -34,6 +34,7 @@
 .blog-article {
     display: flex;
     flex-direction: column;
+    cursor: pointer;
     background-color: white;
     margin: 20px;
     margin-top: 30px;
@@ -55,9 +56,12 @@
 #toast {
     display: none;
     min-width: 300px;
+    width: 90%;
+    max-height: 90%;
+    overflow-y: scroll;
     background-color: #fff;
     color: #333;
-    text-align: center;
+    text-align: start;
     border-radius: 10px;
     padding: 16px 24px;
     position: fixed;
@@ -84,6 +88,33 @@
 #toast.show {
     display: block;
     animation: fadeIn 0.4s;
+}
+
+#toast-message {
+    padding: 5%;
+}
+
+#toast-message h1 {
+    font-family: var(--font-play);
+    text-align: center;
+    padding: 0px 0px 30px 0;
+}
+
+#toast-message div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.img-div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.img-div img {
+    max-width: 50%;
 }
 
 @keyframes fadeIn {

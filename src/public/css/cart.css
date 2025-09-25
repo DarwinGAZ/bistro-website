@@ -20,7 +20,7 @@ body {
 }
 
 .cart-header {
-    margin-top: 6%;
+    margin-top: 120px;
     margin-bottom: 40px;
     background-color: var(--color-red);
     color: #fff;
@@ -34,14 +34,24 @@ body {
 .cart-page {
     display: flex;
     max-width: 1200px;
+    height: 80vh;
     justify-content: center;
     padding: 20px;
     margin: 20px auto;
     gap: 1.5rem;
 }
 
-#cart-items {
+.cart-items--div {
     flex: 2;
+}
+
+.cart-items--div button {
+    border: none;
+    background-color: transparent;
+    color: var(--color-red);
+    font-weight: bold;
+    margin-left: 15px;
+    cursor: pointer;
 }
 
 .cart-item {
@@ -128,6 +138,13 @@ body {
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--color-red);
+}
+
+input[type="email"] {
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.332);
+    border-radius: 20px;
+    font-size: 1rem;
 }
 
 .checkout-btn {

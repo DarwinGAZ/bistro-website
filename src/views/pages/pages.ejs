@@ -17,107 +17,21 @@
             </div>
 
             <div class="container">
+                <% items.forEach(item => { %>
                 <article class="blog-article">
-                    <img src="assets/images/sushi.png" alt="" />
+                    <img src="<%= item.image %>" alt="<%= item.name %>" />
                     <div class="article-text">
-                        <p>January 3, 2023</p>
-                        <h3>How to prepare a delicious gluten free sushi</h3>
+                        <p><%= item.data %></p>
+                        <h3><%= item.title %></h3>
                     </div>
                 </article>
-
-                <article class="blog-article">
-                    <img src="assets/images/sushi.png" alt="" />
-                    <div class="article-text">
-                        <p>January 3, 2023</p>
-                        <h3>How to prepare a delicious gluten free sushi</h3>
-                    </div>
-                </article>
-
-                <article class="blog-article">
-                    <img src="assets/images/sushi.png" alt="" />
-                    <div class="article-text">
-                        <p>January 3, 2023</p>
-                        <h3>How to prepare a delicious gluten free sushi</h3>
-                    </div>
-                </article>
-
-                <article class="blog-article">
-                    <img src="assets/images/sushi.png" alt="" />
-                    <div class="article-text">
-                        <p>January 3, 2023</p>
-                        <h3>How to prepare a delicious gluten free sushi</h3>
-                    </div>
-                </article>
-
-                <article class="blog-article">
-                    <img src="assets/images/sushi.png" alt="" />
-                    <div class="article-text">
-                        <p>January 3, 2023</p>
-                        <h3>How to prepare a delicious gluten free sushi</h3>
-                    </div>
-                </article>
-
-                <article class="blog-article">
-                    <img src="assets/images/sushi.png" alt="" />
-                    <div class="article-text">
-                        <p>January 3, 2023</p>
-                        <h3>How to prepare a delicious gluten free sushi</h3>
-                    </div>
-                </article>
-
-                <article class="blog-article">
-                    <img src="assets/images/sushi.png" alt="" />
-                    <div class="article-text">
-                        <p>January 3, 2023</p>
-                        <h3>How to prepare a delicious gluten free sushi</h3>
-                    </div>
-                </article>
-
-                <article class="blog-article">
-                    <img src="assets/images/sushi.png" alt="" />
-                    <div class="article-text">
-                        <p>January 3, 2023</p>
-                        <h3>How to prepare a delicious gluten free sushi</h3>
-                    </div>
-                </article>
-
-                <article class="blog-article">
-                    <img src="assets/images/sushi.png" alt="" />
-                    <div class="article-text">
-                        <p>January 3, 2023</p>
-                        <h3>How to prepare a delicious gluten free sushi</h3>
-                    </div>
-                </article>
-
-                <article class="blog-article">
-                    <img src="assets/images/sushi.png" alt="" />
-                    <div class="article-text">
-                        <p>January 3, 2023</p>
-                        <h3>How to prepare a delicious gluten free sushi</h3>
-                    </div>
-                </article>
-
-                <article class="blog-article">
-                    <img src="assets/images/sushi.png" alt="" />
-                    <div class="article-text">
-                        <p>January 3, 2023</p>
-                        <h3>How to prepare a delicious gluten free sushi</h3>
-                    </div>
-                </article>
-
-                <article class="blog-article">
-                    <img src="assets/images/sushi.png" alt="" />
-                    <div class="article-text">
-                        <p>January 3, 2023</p>
-                        <h3>How to prepare a delicious gluten free sushi</h3>
-                    </div>
-                </article>
+                <% }) %>
             </div>
         </main>
 
         <div id="toast">
             <button class="close-btn">×</button>
-            <span id="toast-message"></span>
+            <div id="toast-message"></div>
         </div>
 
         <%- include("../partials/footer.ejs") %>

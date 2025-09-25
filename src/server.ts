@@ -4,6 +4,9 @@ import { routes } from "./routes/main";
 
 const server = express();
 
+server.use(express.urlencoded({ extended: true }));
+server.use(express.json());
+
 server.set("view engine", "ejs");
 server.set("views", path.join(__dirname, "public"));
 
