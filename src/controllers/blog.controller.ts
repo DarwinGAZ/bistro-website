@@ -6,9 +6,3 @@ export const createManyBlogItems: RequestHandler = async (req, res) => {
 
     res.status(201).json({ message: "Items criado com succeso", items });
 };
-
-export const getManyBlogItems = async () => {
-    const items = await prisma?.pagesItem.findMany({});
-
-    return items;
-};
