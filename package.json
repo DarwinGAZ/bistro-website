@@ -4,6 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
+        "start": "node dist/src/server.js",
+        "postinstall": "tsc && copyfiles -a 'src/views/**/*' dist/src/views",
         "dev": "tsx watch src/server.ts"
     },
     "repository": {
@@ -24,7 +26,6 @@
         "mercadopago": "^2.9.0",
         "nodemailer": "^7.0.6",
         "prisma": "^6.16.0",
-        "stripe": "^18.5.0",
         "tsx": "^4.20.5"
     },
     "devDependencies": {
@@ -34,9 +35,8 @@
         "@types/express": "^5.0.3",
         "@types/mercadopago": "^1.5.11",
         "@types/nodemailer": "^7.0.1",
-        "@types/stripe": "^8.0.416",
-        "eslint": "^9.35.0",
+        "copyfiles": "^2.4.1",
         "globals": "^16.4.0",
-        "typescript-eslint": "^8.43.0"
+        "typescript": "^5.9.3"
     }
 }
