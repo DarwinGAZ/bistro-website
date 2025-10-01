@@ -68,7 +68,7 @@ export const createManyBlogItemsService = async () => {
     return items;
 };
 
-export const getManyBlogItems = async () => {
+export const getManyBlogItemsService = async () => {
     const items = await prisma.pagesItem.findMany({});
 
     return items;

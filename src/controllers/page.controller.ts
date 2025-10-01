@@ -1,6 +1,6 @@
 import { RequestHandler } from "express";
 import { getMenuItemsService } from "../services/menu";
-import { getManyBlogItems } from "./blog.controller";
+import { getManyBlogItemsService } from "../services/blog";
 
 export const homePage: RequestHandler = (req, res) => {
     res.render("../views/pages/home.ejs", {
@@ -28,7 +28,7 @@ export const menuPage: RequestHandler = async (req, res) => {
 };
 
 export const pagesPage: RequestHandler = async (req, res) => {
-    const items = await getManyBlogItems();
+    const items = await getManyBlogItemsService();
 
     res.render("../views/pages/pages.ejs", {
         currentPage: "pages",
