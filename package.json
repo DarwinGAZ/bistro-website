@@ -4,8 +4,6 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "node dist/src/server.js",
-        "postinstall": "tsc && copyfiles -a 'src/views/**/*' dist/src/views",
         "dev": "tsx watch src/server.ts"
     },
     "repository": {
